@@ -1,5 +1,6 @@
 <?php
 require_once "../../lib/autoload.php";
+require_once "access_control.php";
 $apiActions = $Container->getApiActions();
 $db = $Container->getDBM();
 $uri_parts = explode("/",$_SERVER['REQUEST_URI']);
