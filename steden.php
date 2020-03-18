@@ -12,8 +12,6 @@ $cities = $Container->getCityLoader()->Load();
 $template = $VS->LoadTemplate("steden");
 
 $MS->ShowMessages();
-
-//Anneleen test commit
 ?>
 <body>
 

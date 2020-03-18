@@ -10,6 +10,7 @@ class ApiActions
         $this->pdo = $pdo;
     }
 
+    //API POST
     public function addData(){
 
         $data = json_decode(file_get_contents('php://input'));
@@ -34,7 +35,7 @@ class ApiActions
 
     }
 
-
+    //API PUT
     public function updateData($id){
 
         $data = json_decode(file_get_contents('php://input'));
@@ -54,6 +55,7 @@ class ApiActions
     }
 
 
+    // API DELETE
     public function deleteData($id){
         //clean user-input
         $taa_id = htmlentities($id);
