@@ -72,10 +72,31 @@ require_once "../../lib/autoload.php";
 //SUBMIT
 if ( $_POST['submitGet'] == "GET alle taken" )
 {
-    echo '<p>hier komt iets</p>';
+    ?>
+<table class="table">
+    <tr>
+        <th>Taak</th>
+        <th>Datum</th>
+        <th>Omschrijving</th>
+    </tr>
+    <?php
+
+    $data = $db->GetData("SELECT * from taak");
+
+    foreach( $data as $row )
+    {
+        echo "<tr>";
+        echo "<td>" . $row['taa_id'] . "</td>";
+        echo "<td>" . $row['taa_datum'] . "</td>";
+        echo "<td>" . $row['taa_omschr'] . "</td>";
+        echo "</tr>" ;
+    }
 }
 ?>
+</table>
 
 </body>
 </html>
+
+
 
