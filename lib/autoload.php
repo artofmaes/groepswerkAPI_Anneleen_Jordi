@@ -31,7 +31,7 @@ require_once $_root_folder . "/Service/UploadService.php";
 require_once $_root_folder . "/Service/DownloadService.php";
 require_once $_root_folder . "/Service/ViewService.php";
 
-require_once $_root_folder . "/testspa/api/ApiActions.php";
+require_once $_root_folder . "/api/ApiActions.php";
 
 session_start();
 
