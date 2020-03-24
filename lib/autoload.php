@@ -47,7 +47,7 @@ $_SESSION["head_printed"] = false;
 
 //redirect naar NO ACCESS pagina als de gebruiker niet ingelogd is en niet naar
 //een publiek toegankelijke pagina gaat (login, registratie of no_access)
-if ( ! isset($_SESSION['usr']) AND ! $login_form AND ! $register_form AND ! $no_access AND !$_SERVER['REQUEST_URI'] === 'testspa/api/index.php')
+if ( ! isset($_SESSION['usr']) AND ! $login_form AND ! $register_form AND ! $no_access AND !$_SERVER['REQUEST_URI'] === 'api/index.php')
 {
     header("Location: " . $config->getApplicationFolder() . "/no_access.php");
 }
