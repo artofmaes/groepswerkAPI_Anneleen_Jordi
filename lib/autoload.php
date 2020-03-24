@@ -1,9 +1,9 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/groepswerkAPI_Anneleen_Jordi_2/Model/Config.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/groepswerkAPI_Anneleen_Jordi/Model/Config.php";
 //ini_set("error_reporting", E_ALL);
 //ini_set("display_errors", 1);
 //ini_set("display_startup_errors", 1);
-$config = new Config( $path = "/groepswerkAPI_Anneleen_Jordi_2" );
+$config = new Config( $path = "/groepswerkAPI_Anneleen_Jordi" );
 $_application_folder = $config->getApplicationFolder();
 $_root_folder = $config->getRootFolder();
 

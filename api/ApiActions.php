@@ -11,14 +11,23 @@ class ApiActions
     }
     // GET
     public function getData($id =null){
-        global $db;
         if($id === null){
-            $data = $db->GetData("SELECT * from taak");
-            echo json_encode($data);
+//            $data = $db->GetData();
+            $stm = $this->pdo->prepare("SELECT * from taak");
+            $stm->execute();
+
+            $rows = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+            echo json_encode($rows);
         }
         else{
-            $data = $db->GetData("SELECT * from taak where taa_id = '". $id ."'");
-            echo json_encode($data);
+//            $data = $db->GetData();
+            $stm = $this->pdo->prepare("SELECT * from taak where taa_id = '". $id ."'");
+            $stm->execute();
+
+            $rows = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+            echo json_encode($rows);
         }
     }
 
