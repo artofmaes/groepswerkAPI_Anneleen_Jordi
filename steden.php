@@ -10,7 +10,7 @@ $VS->BasicHead($css);
 
 $cities = $Container->getCityLoader()->Load();
 $template = $VS->LoadTemplate("steden");
-
+// test commit anneleen
 $MS->ShowMessages();
 ?>
 <body>

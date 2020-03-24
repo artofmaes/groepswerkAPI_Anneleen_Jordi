@@ -12,9 +12,9 @@ class Config
     private $root_folder;
 
     private $db_host = "localhost";
-    private $db_database = "php2stedensteven";
+    private $db_database = "city";
     private $db_user = 'root';
-    private $db_pass = 'Xrkwq349';
+    private $db_pass = 'mysql';
 
     public function __construct( $path )
     {
