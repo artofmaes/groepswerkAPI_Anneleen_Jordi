@@ -9,6 +9,7 @@ class ApiActions
     {
         $this->pdo = $pdo;
     }
+    // GET
     public function getData($id =null){
         if($id === null){
 //            $data = $db->GetData();
@@ -30,6 +31,7 @@ class ApiActions
         }
     }
 
+    //POST
     public function addData(){
 
         $data = json_decode(file_get_contents('php://input'));
@@ -54,7 +56,7 @@ class ApiActions
 
     }
 
-
+    //PUT
     public function updateData($id){
 
         $data = json_decode(file_get_contents('php://input'));
@@ -73,7 +75,7 @@ class ApiActions
         }
     }
 
-
+    //DELETE
     public function deleteData($id){
         //clean user-input
         $taa_id = htmlentities($id);
